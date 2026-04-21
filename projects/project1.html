@@ -13,7 +13,7 @@
 
 <meta name="date" content="2026-04-06" />
 
-<title>Final Project - STAT 4000</title>
+<title>Final Project</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -1573,7 +1573,7 @@ font-size: 0.95em;
 
 
 
-<h1 class="title toc-ignore">Final Project - STAT 4000</h1>
+<h1 class="title toc-ignore">Final Project</h1>
 <h4 class="author">Kurt Decker</h4>
 <h4 class="date">2026-04-06</h4>
 
@@ -2057,22 +2057,22 @@ the savings rate and the lagged predictors, that is, the previous
 month’s predictor value.</p>
 <pre class="r"><code># Correlation between savings rate and lagged predictors ####
 # Lag 1
-cor(fred$psavert[-1], fred$fedfunds[-nrow(fred)])</code></pre>
+cor(fred$psavert[-1], fred$fedfunds[-nrow(fred)]) #FFER</code></pre>
 <pre><code>## [1] -0.4239329</code></pre>
-<pre class="r"><code>cor(fred$psavert[-1], fred$umcsent[-nrow(fred)])</code></pre>
+<pre class="r"><code>cor(fred$psavert[-1], fred$umcsent[-nrow(fred)]) #UMCS</code></pre>
 <pre><code>## [1] 0.2240834</code></pre>
-<pre class="r"><code>cor(fred$psavert[-1], fred$sp500_pch[-nrow(fred)])</code></pre>
+<pre class="r"><code>cor(fred$psavert[-1], fred$sp500_pch[-nrow(fred)]) #S&amp;P 500</code></pre>
 <pre><code>## [1] 0.01900089</code></pre>
 <pre class="r"><code># Lag 2
-cor(fred$psavert[-c(1,2)], fred$fedfunds[-c(nrow(fred)-1, nrow(fred))])</code></pre>
+cor(fred$psavert[-c(1,2)], fred$fedfunds[-c(nrow(fred)-1, nrow(fred))]) #FFER</code></pre>
 <pre><code>## [1] -0.379776</code></pre>
-<pre class="r"><code>cor(fred$psavert[-c(1,2)], fred$umcsent[-c(nrow(fred)-1, nrow(fred))])</code></pre>
+<pre class="r"><code>cor(fred$psavert[-c(1,2)], fred$umcsent[-c(nrow(fred)-1, nrow(fred))]) #UMCS</code></pre>
 <pre><code>## [1] 0.2818364</code></pre>
-<pre class="r"><code>cor(fred$psavert[-c(1,2)], fred$sp500_pch[-c(nrow(fred)-1, nrow(fred))])</code></pre>
+<pre class="r"><code>cor(fred$psavert[-c(1,2)], fred$sp500_pch[-c(nrow(fred)-1, nrow(fred))]) # S&amp;P 500</code></pre>
 <pre><code>## [1] -0.03534895</code></pre>
 <pre class="r"><code># Lag 3
 cor(fred$psavert[-c(1,2,3)], 
-    fred$fedfunds[-c(nrow(fred)-2, nrow(fred)-1, nrow(fred))])</code></pre>
+    fred$fedfunds[-c(nrow(fred)-2, nrow(fred)-1, nrow(fred))]) # FFER</code></pre>
 <pre><code>## [1] -0.3496636</code></pre>
 <pre class="r"><code># Correlation between savings rate and the previous month&#39;s savings rate ####
 cor(fred$psavert[-1], fred$psavert[-nrow(fred)]) # lag 1</code></pre>
